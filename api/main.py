@@ -13,6 +13,8 @@ if not UNSPLASH_KEY:
 
 app = Flask(__name__)
 
+app.config["DEBUG"] = True
+
 @app.route("/new-image")
 def new_image():
     word = request.args.get("query")
